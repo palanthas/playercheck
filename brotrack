@@ -1,0 +1,22 @@
+#!/bin/bash
+
+URL="http://www.gametracker.com/server_info/mod-mc.xtremeidiots.com:25565/"
+
+PLAYERARRAY=( palanthas aranithil roassa sheeeva wigal)
+NUM=0
+SEARCH=$(curl $URL)
+
+for i in "${PLAYERARRAY[@]}"
+do
+	if echo $SEARCH | grep -i "$i"; then
+		NUM=$((NUM+1));
+		PLAYERS="$PLAYERS $i";
+	else
+		echo $NUM;
+	fi
+done
+
+echo ""
+echo "There are $NUM players online"
+echo ""
+echo "They are: $PLAYERS"

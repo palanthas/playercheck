@@ -2,7 +2,7 @@
 
 URL="http://www.gametracker.com/server_info/mod-mc.xtremeidiots.com:25565/"
 
-PLAYERARRAY=( palanthas aranithil roassa sheeeva wigal)
+PLAYERARRAY=( palanthas aranithil roassa eruedraith )
 NUM=0
 SEARCH=$(curl $URL)
 
